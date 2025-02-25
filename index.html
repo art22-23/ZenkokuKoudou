@@ -163,7 +163,7 @@
       display: inline-block;
       margin-top: 15px;
       padding: 10px 20px;
-      background: #333;
+      background: #555;
       color: #fff;
       text-decoration: none;
       border-radius: 5px;
@@ -196,160 +196,395 @@
           <th>日付</th>
           <th>時間</th>
           <th>会場</th>
+          <th>主催</th>
+          <th>リンク</th>
         </tr>
         <tr>
-          <td>2025/03/15</td>
-          <td>18:00</td>
-          <td>シネマパーク</td>
-        </tr>
-        <tr>
-          <td>2025/03/20</td>
-          <td>20:00</td>
-          <td>映画の杜</td>
-        </tr>
-        <tr>
-          <td>2025/03/25</td>
-          <td>19:30</td>
-          <td>ムービーワールド</td>
+          <td>2025/03/19</td>
+          <td>13:30</td>
+          <td>アイーナ・いわて県民情報交流センター</td>
+          <td>-</td>
+          <td>-</td>
         </tr>
       </table>
     </section>
 
-    <!-- 過去の上映情報（折りたたみ） -->
     <section id="past" class="screenings">
       <h2>過去の上映情報</h2>
       <details>
         <summary>過去の上映情報を表示する</summary>
+        
+        <!-- 北海道 -->
+        <h3>北海道</h3>
         <table>
           <tr>
             <th>日付</th>
+            <th>開催地</th>
             <th>会場</th>
             <th>主催</th>
             <th>報告</th>
           </tr>
           <tr>
-            <td>2024/1/21</td>
-            <td>なかのZERO小ホール</td>
-            <td>戦時性暴力問題連絡協議会</td>
-            <td><a href="https://example.com/report/tokyo" target="_blank">報告を見る</a></td>
-          </tr>
-          <tr>
-            <td>2024/1/28</td>
-            <td>神戸まちづくり会館</td>
-            <td>「慰安婦」問題を考える会・神戸</td>
-            <td><a href="https://example.com/report/kobe" target="_blank">報告を見る</a></td>
-          </tr>
-          <tr>
-            <td>2024/1/28</td>
-            <td>ドーンセンター　ホール</td>
-            <td>日本軍「慰安婦」問題・関西ネットワーク</td>
-            <td><a href="https://example.com/report/osaka" target="_blank">報告を見る</a></td>
-          </tr>
-          <tr>
-            <td>2024/1/29</td>
-            <td>滋賀県立男女共同参画センター(G-NETしが)1F視聴覚室</td>
-            <td>日本軍「慰安婦」問題を記憶・継承する会・滋賀</td>
-            <td><a href="https://example.com/report/shiga" target="_blank">報告を見る</a></td>
-          </tr>
-          <tr>
-            <td>2024/2/4</td>
-            <td>合人社ウエンディひと・まちプラザ（広島市まちづくり市民交流プラザ） マルチメディアスタジオ（北棟6F）</td>
-            <td>日本軍「慰安婦」問題解決ひろしまネットワーク</td>
-            <td><a href="https://example.com/report/hiroshima" target="_blank">報告を見る</a></td>
-          </tr>
-          <tr>
-            <td>2024/2/25</td>
-            <td>アバンティ響都ホール</td>
-            <td>朝鮮学校と民族教育の発展をめざす会・京滋（こっぽんおり）</td>
-            <td><a href="https://example.com/report/kyoto1" target="_blank">報告を見る</a></td>
-          </tr>
-          <tr>
-            <td>2024/3/5</td>
-            <td>シアターセブン</td>
-            <td>日本軍「慰安婦」問題・関西ネットワーク</td>
-            <td><a href="https://example.com/report/osaka2" target="_blank">報告を見る</a></td>
-          </tr>
-          <tr>
-            <td>2024/3/25</td>
-            <td>川崎市総合自治会館・ホール（武蔵小杉駅前）</td>
-            <td>川崎から日本軍「慰安婦」問題の解決を求める市民の会</td>
-            <td><a href="https://example.com/report/kawasaki" target="_blank">報告を見る</a></td>
-          </tr>
-          <tr>
-            <td>2024/4/22</td>
-            <td>北とぴあドームホール</td>
-            <td>在日本朝鮮人人権協会の性差別撤廃部会</td>
-            <td><a href="https://example.com/report/tokyo2" target="_blank">報告を見る</a></td>
-          </tr>
-          <tr>
-            <td>2024/5/27</td>
+            <td>2023/5/27</td>
+            <td>札幌</td>
             <td>北海道高等学校教職員センター4階講堂</td>
             <td>日本軍「慰安婦」問題の解決をめざす北海道の会</td>
             <td><a href="https://example.com/report/sapporo" target="_blank">報告を見る</a></td>
           </tr>
           <tr>
-            <td>2024/6/10</td>
-            <td>京都朝鮮初級学校</td>
-            <td>조선학교어머니회교또부련락회</td>
-            <td><a href="https://example.com/report/kyoto2" target="_blank">報告を見る</a></td>
+            <td>2023/8/10</td>
+            <td>函館</td>
+            <td>函館市地域交流まちづくりセンター</td>
+            <td>金福童上映実行委員会</td>
+            <td><a href="https://example.com/report/hakodate" target="_blank">報告を見る</a></td>
+          </tr>
+        </table>
+        
+        <!-- 東北 -->
+        <h3>東北</h3>
+        <table>
+          <tr>
+            <th>日付</th>
+            <th>開催地</th>
+            <th>会場</th>
+            <th>主催</th>
+            <th>報告</th>
           </tr>
           <tr>
-            <td>2024/7/2</td>
+            <td>2025/3/29</td>
+            <td>岩手・盛岡</td>
+            <td>アイーナ・いわて県民情報交流センター</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+        </table>
+        
+        <!-- 関東 -->
+        <h3>関東</h3>
+        <table>
+          <tr>
+            <th>日付</th>
+            <th>開催地</th>
+            <th>会場</th>
+            <th>主催</th>
+            <th>報告</th>
+          </tr>
+          <tr>
+            <td>2023/1/21</td>
+            <td>東京・中野</td>
+            <td>なかのZERO小ホール</td>
+            <td>戦時性暴力問題連絡協議会</td>
+            <td><a href="https://example.com/report/tokyo" target="_blank">報告</a></td>
+          </tr>
+          <tr>
+            <td>2023/3/25</td>
+            <td>川崎</td>
+            <td>川崎市総合自治会館・ホール（武蔵小杉駅前）</td>
+            <td>川崎から日本軍「慰安婦」問題の解決を求める市民の会</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2023/4/22</td>
+            <td>東京・王子</td>
+            <td>北とぴあドームホール</td>
+            <td>在日本朝鮮人人権協会の性差別撤廃部会</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2024/1/20</td>
+            <td>東京・葛飾</td>
+            <td>堀切こうとう教会</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2024/10/19</td>
+            <td>東京・立川</td>
+            <td>立川女性総合センターホール（アイムホール）</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2024/11/4</td>
+            <td>東京・大久保</td>
+            <td>日本キリスト教会柏木教会</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+        </table>
+        
+        <!-- 中部 -->
+        <h3>中部</h3>
+        <table>
+          <tr>
+            <th>日付</th>
+            <th>開催地</th>
+            <th>会場</th>
+            <th>主催</th>
+            <th>報告</th>
+          </tr>
+          <tr>
+            <td>2023/8/26</td>
+            <td>名古屋</td>
+            <td>東別院会館（名古屋市中区橘2-8-45）</td>
+            <td>旧日本軍による性的被害女性を支える会</td>
+            <td>-</td>
+          </tr>
+        </table>
+        
+        <!-- 近畿 -->
+        <h3>近畿</h3>
+        <table>
+          <tr>
+            <th>日付</th>
+            <th>開催地</th>
+            <th>会場</th>
+            <th>主催</th>
+            <th>報告</th>
+          </tr>
+          <tr>
+            <td>2023/1/28</td>
+            <td>神戸</td>
+            <td>神戸まちづくり会館</td>
+            <td>「慰安婦」問題を考える会・神戸</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2023/1/28</td>
+            <td>大阪</td>
+            <td>ドーンセンター　ホール</td>
+            <td>日本軍「慰安婦」問題・関西ネットワーク</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2023/1/29</td>
+            <td>滋賀</td>
+            <td>滋賀県立男女共同参画センター(G-NETしが)1F視聴覚室</td>
+            <td>日本軍「慰安婦」問題を記憶・継承する会・滋賀</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2023/2/25</td>
+            <td>京都</td>
+            <td>アバンティ響都ホール</td>
+            <td>朝鮮学校と民族教育の発展をめざす会・京滋（こっぽんおり）</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2023/3/5</td>
+            <td>大阪</td>
+            <td>シアターセブン</td>
+            <td>日本軍「慰安婦」問題・関西ネットワーク</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2023/6/10</td>
+            <td>京都</td>
+            <td>京都朝鮮初級学校</td>
+            <td>조선학교어머니회교또부련락회</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2023/7/2</td>
+            <td>奈良</td>
             <td>奈良県女性センター</td>
             <td>アイ女性会議なら</td>
             <td><a href="https://example.com/report/nara" target="_blank">報告を見る</a></td>
           </tr>
           <tr>
-            <td>2024/7/29</td>
-            <td>北九州市生涯学習総合センター３階ホール</td>
-            <td>련락회</td>
-            <td><a href="https://example.com/report/kitakyushu" target="_blank">報告を見る</a></td>
+            <td>2023/8/27</td>
+            <td>大阪・生野</td>
+            <td>Ikuno Park</td>
+            <td>生野上映実行委員会</td>
+            <td>-</td>
           </tr>
           <tr>
-            <td>2024/8/5</td>
+            <td>2023/9/23</td>
+            <td>宝塚</td>
+            <td>宝塚市立西公民館</td>
+            <td>日本軍「慰安婦」被害女性と共に歩む大阪、神戸、阪神連絡会</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2024/1/11</td>
+            <td>京都</td>
+            <td>京都女子大</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2024/6/6</td>
+            <td>姫路</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2024/9/12</td>
+            <td>大阪・城東</td>
+            <td>城東朝鮮会館</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2024/2/18</td>
+            <td>姫路</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2024/2/25</td>
+            <td>滋賀</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2024/11/30</td>
+            <td>大阪・豊中</td>
+            <td>とよなか男女共同参画推進センターすてっぷ　ホール</td>
+            <td>情報未定</td>
+            <td><a href="https://example.com/report/osakatoshinaka" target="_blank">報告を見る</a></td>
+          </tr>
+        </table>
+        
+        <!-- 中国 -->
+        <h3>中国</h3>
+        <table>
+          <tr>
+            <th>日付</th>
+            <th>開催地</th>
+            <th>会場</th>
+            <th>主催</th>
+            <th>報告</th>
+          </tr>
+          <tr>
+            <td>2023/2/4</td>
+            <td>広島</td>
+            <td>合人社ウエンディひと・まちプラザ（広島市まちづくり市民交流プラザ）</td>
+            <td>日本軍「慰安婦」問題解決ひろしまネットワーク</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2023/8/19</td>
+            <td>岡山</td>
+            <td>岡山県立図書館2階デジタル情報シアター</td>
+            <td>性と生を考える！女たちのおしゃべり会2023 / 慰安婦問題を考える女たちの会・岡山</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2023/8/20</td>
+            <td>福山</td>
+            <td>福山市市民参画センター</td>
+            <td>日本軍「慰安婦」問題を考える会・福山</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2024/10/27</td>
+            <td>広島・廿日</td>
+            <td>日本基督教団廿日市教会</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2024/11/10</td>
+            <td>広島</td>
+            <td>Social Book Cafeハチドリ舎</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+        </table>
+        
+        <!-- 四国 -->
+        <h3>四国</h3>
+        <table>
+          <tr>
+            <th>日付</th>
+            <th>開催地</th>
+            <th>会場</th>
+            <th>主催</th>
+            <th>報告</th>
+          </tr>
+          <tr>
+            <td>2023/8/5</td>
+            <td>高知</td>
             <td>高知市立自由民権記念館　民権ホール</td>
             <td>いのちつなぐ</td>
-            <td><a href="https://example.com/report/kochi" target="_blank">報告を見る</a></td>
+            <td>-</td>
+          </tr>
+        </table>
+        
+        <!-- 九州 -->
+        <h3>九州</h3>
+        <table>
+          <tr>
+            <th>日付</th>
+            <th>開催地</th>
+            <th>会場</th>
+            <th>主催</th>
+            <th>報告</th>
+          </tr>
+          <tr>
+            <td>2023/7/29</td>
+            <td>北九州</td>
+            <td>北九州市生涯学習総合センター３階ホール</td>
+            <td>련락회</td>
+            <td>-</td>
+          </tr>
+        </table>
+        
+        <!-- 沖縄 -->
+        <h3>沖縄</h3>
+        <table>
+          <tr>
+            <th>日付</th>
+            <th>開催地</th>
+            <th>会場</th>
+            <th>主催</th>
+            <th>報告</th>
+          </tr>
+          <tr>
+            <td>2024/6/1</td>
+            <td>沖縄</td>
+            <td>沖縄キリスト教学院　シャローム会館1－1教室</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2024/7/18～8/17</td>
+            <td>沖縄・シアタードーナツ</td>
+            <td>シアタードーナツ・オキナワ</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>2024/7/20</td>
+            <td>沖縄・うるま</td>
+            <td>本と商い　ある日､(書店）</td>
+            <td>-</td>
+            <td>-</td>
           </tr>
           <tr>
             <td>2024/8/10</td>
-            <td>函館市地域交流まちづくりセンター</td>
-            <td>金福童上映実行委員会</td>
-            <td><a href="https://example.com/report/hakodate" target="_blank">報告を見る</a></td>
+            <td>沖縄・宜野湾</td>
+            <td>沖縄キリスト教センター</td>
+            <td>-</td>
+            <td>-</td>
           </tr>
           <tr>
-            <td>2024/8/19</td>
-            <td>岡山県立図書館2階デジタル情報シアター</td>
-            <td>性と生を考える！女たちのおしゃべり会2023 / 慰安婦問題を考える女たちの会・岡山</td>
-            <td><a href="https://example.com/report/okayama" target="_blank">報告を見る</a></td>
-          </tr>
-          <tr>
-            <td>2024/8/20</td>
-            <td>福山市市民参画センター</td>
-            <td>日本軍「慰安婦」問題を考える会・福山</td>
-            <td><a href="https://example.com/report/fukuyama" target="_blank">報告を見る</a></td>
-          </tr>
-          <tr>
-            <td>2024/8/26</td>
-            <td>東別院会館（名古屋市中区橘2-8-45）</td>
-            <td>旧日本軍による性的被害女性を支える会</td>
-            <td><a href="https://example.com/report/nagoya" target="_blank">報告を見る</a></td>
-          </tr>
-          <tr>
-            <td>2024/8/27</td>
-            <td>Ikuno Park</td>
-            <td>生野上映実行委員会</td>
-            <td><a href="https://example.com/report/ikuno" target="_blank">報告を見る</a></td>
-          </tr>
-          <tr>
-            <td>2024/9/23</td>
-            <td>宝塚市立西公民館</td>
-            <td>日本軍「慰安婦」被害女性と共に歩む大阪、神戸、阪神連絡会</td>
-            <td><a href="https://example.com/report/takarazuka" target="_blank">報告を見る</a></td>
+            <td>2024/11/24</td>
+            <td>沖縄・名護</td>
+            <td>名護市立中央図書館AVルーム</td>
+            <td>-</td>
+            <td>-</td>
           </tr>
         </table>
+        
       </details>
     </section>
+    
+    
     
     <!-- 映画の基本情報・紹介 -->
     <section id="info">
