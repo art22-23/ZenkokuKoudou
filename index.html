@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ドキュメンタリー映画「金福童」特設サイト</title>
+  <style>
+    /* リセット */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* 背景画像の設定 */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://example.com/path/to/your/background.jpg'); /* 任意の背景画像URLに置き換えてください */
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* ヘッダー */
+    header {
+      /* ヘッダー画像を設定（必要に応じてURLを変更してください） */
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('https://example.com/path/to/your/header.jpg') no-repeat center center;
+      background-size: cover;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+    header h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 12px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* コンテナ */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 100px 20px 40px 20px; /* ヘッダー分の余白を確保 */
+    }
+
+    /* 映画の基本情報・紹介のセクションに余白を追加 */
+    #info {
+      padding-top: 50px;
+    }
+
+    /* セクション */
+    section {
+      scroll-margin-top: 120px;
+      background: #fff;
+      margin-bottom: 50px;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+    /* セクション毎に少しずつアニメーションの遅延を設定 */
+    section:nth-of-type(1) { animation-delay: 0.2s; }
+    section:nth-of-type(2) { animation-delay: 0.4s; }
+    section:nth-of-type(3) { animation-delay: 0.6s; }
+    section:nth-of-type(4) { animation-delay: 0.8s; }
+    section:nth-of-type(5) { animation-delay: 1s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    h2 {
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ffd700;
+      padding-bottom: 5px;
+    }
+
+    /* 上映情報テーブル */
+    .screenings table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .screenings th, .screenings td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    /* detailsスタイル */
+    details {
+      margin-top: 10px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      padding: 10px;
+      background: #ffd700;
+      border-radius: 3px;
+    }
+
+    /* 予告編 */
+    .trailers iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      margin-bottom: 20px;
+      transition: transform 0.3s;
+    }
+    .trailers iframe:hover {
+      transform: scale(1.05);
+    }
+
+    /* 視聴者の感想 */
+    .feedback ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+    .feedback li {
+      background: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-left: 4px solid #ffd700;
+    }
+
+    /* 自主上映勧誘 */
+    .invite {
+      text-align: center;
+      background: #ffd700;
+      padding: 20px;
+      border-radius: 5px;
+      font-size: 1.2em;
+    }
+    .invite a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 2px solid #333;
+      transition: color 0.3s, border-color 0.3s;
+    }
+    .invite a:hover {
+      color: #000;
+      border-color: #000;
+    }
+    .apply-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .apply-link:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ドキュメンタリー映画「金福童」特設サイト</h1>
+    <nav>
+      <a href="#info">映画情報</a>
+      <a href="#upcoming">今後の上映情報</a>
+      <a href="#past">過去の上映情報</a>
+      <a href="#trailers">予告編</a>
+      <a href="#feedback">視聴者の感想</a>
+      <a href="#invite">自主上映勧誘</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- 映画の基本情報・紹介 -->
+    <section id="info">
+      <h2>映画について</h2>
+      <p>本作は、日本軍「慰安婦」被害者である金福童さんの人生を描いた作品です。</p>
+      <p>日本軍の性奴隷とされた金福童さんが1992年の名乗り出以降、問題の解決を訴えながら出会いを重ね、社会の不条理に苦しむ人々を励まし、手を取ってともに歩む姿が描かれています。2019年1月、金福童さんが亡くなられ、その生を多くの人に知ってもらおうとドキュメンタリー映画「金福童」が製作されました。私たちはこの映画をぜひ多くの日本の皆さんにも見てほしいと考え、全国各地での上映を進めています。金福童さんの生き方に共感し、感動した、勇気と希望をもらったという多くの声が届いています。</p>
+      <p>監督：宋元根 （ソン・ウォングン）| 制作年：2019年 |制作会社：ニュースタパ |上映時間：101分  </p>
+      <h2>壮絶な生があり、希望に満ちた死があった。</h2>
+      <p>その死を悼んで「女性人権運動家・金福童市民葬」には6千人が集まった。</p>
+      <p>人々はなぜそれほどまでに彼女を慕い、敬い、その死を惜しんだのか。</p>
+      <p>その理由が今、明かされる。</p>
+      <p>日本軍性奴隷の被害を乗り越えて、人々に平和と希望の尊さを訴え続けた金福童。</p>
+      <p>韓国映画『金福童』は、その闘いの軌跡だ。</p>
+      <h2>＜金福童さんについて＞</h2>
+      <p>14歳で連行され、中国、シンガポール、インドネシア等の戦場を連れ回された。1992年、周囲の反対を押し切って名乗り出た。2010年より、韓国挺身隊問題対策協議会（挺対協）のシェルター「平和のウリチプ（我が家）」で暮らして以降、その発言と行動力で人権活動家と呼ばれた。2012年3月8日、国際女性デーに吉元玉（キル・ウォノク）ハルモニとともに「ナビ（蝶）基金」を設立。コンゴ、ウガンダ、ナイジェリア、シリアなどの紛争地で性暴力被害に苦しむ女性や、ベトナム戦争の時、韓国軍による性暴力被害に遭った女性たちを支援。2015年の「日韓合意」には、「お金で歴史を売った」と抗議し、政府を提訴するなど先頭で闘う。病に苦しみながらも、朝鮮学校の子どもたちを支援しようと「金福童の希望」基金を設立し、亡くなられる直前まで日本を訪れ子どもたちの羽ばたきを励ました。</p>
+
+
+    </section>
+
+    <!-- 今後の上映情報 -->
+    <section id="upcoming" class="screenings">
+      <h2>今後の上映情報</h2>
+      <table>
+        <tr>
+          <th>日付</th>
+          <th>時間</th>
+          <th>会場</th>
+        </tr>
+        <tr>
+          <td>2025/03/15</td>
+          <td>18:00</td>
+          <td>シネマパーク</td>
+        </tr>
+        <tr>
+          <td>2025/03/20</td>
+          <td>20:00</td>
+          <td>映画の杜</td>
+        </tr>
+        <tr>
+          <td>2025/03/25</td>
+          <td>19:30</td>
+          <td>ムービーワールド</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- 過去の上映情報（折りたたみ） -->
+    <section id="past" class="screenings">
+      <h2>過去の上映情報</h2>
+      <details>
+        <summary>過去の上映情報を表示する</summary>
+        <table>
+          <tr>
+            <th>日付</th>
+            <th>時間</th>
+            <th>会場</th>
+          </tr>
+          <tr>
+            <td>2025/02/10</td>
+            <td>18:30</td>
+            <td>シネマステージ</td>
+          </tr>
+          <tr>
+            <td>2025/02/15</td>
+            <td>20:00</td>
+            <td>フィルムシアター</td>
+          </tr>
+          <tr>
+            <td>2025/02/20</td>
+            <td>19:00</td>
+            <td>ムービールーム</td>
+          </tr>
+        </table>
+      </details>
+    </section>
+
+    <!-- 予告編動画 -->
+    <section id="trailers" class="trailers">
+      <h2>予告編動画</h2>
+      <!-- 仮のYoutube埋め込みリンク -->
+      <iframe src="https://www.youtube.com/watch?v=h_GMQhBKHKg" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/watch?v=TyMO_5L97kg" allowfullscreen></iframe>
+    </section>
+
+    <!-- 視聴者の感想 -->
+    <section id="feedback" class="feedback">
+      <h2>視聴者の感想</h2>
+      <ul>
+        <li>始まって10分くらいから終わりまで涙が止まらなかった。ハルモニのお人柄や言葉に感動。忘れずに、しっかりと周りに伝えていくのが自分の使命だと思った。</li>
+        <li>過剰にエモーショナルではなく、また金さんを神格化するでもなく、淡々としているのに、彼女自身の内側からみなぎる存在感に圧倒された。そしてガン闘病中のスピーチ、背筋が伸びて表情がとてもとても美しかった。</li>
+        <li>「何度も見たくなる、感動作です。」</li>
+        <li>1人のハルモニを追ったドキュメンタリーは見たことがなかったので、金福童ハルモニの言葉1つ1つが直接語りかけてくれているように思った。ハルモニの貴重な声を残してくださったことにありがとうと言いたい。</li>
+        <li>「希望」は勝ち取るもの……。本当にそうだと思った。ハルモニが職員の方に「○○」と毎日声をかける姿は、孤立無援で1人かたくなに闘っているのではなく、手に手を取って心つなぎ歴史の中に生きる1人の人間なのだと、伝わってきた。</li>
+        <li>金福童ハルモニの人生が、人権活動家、被害者としてだけでなく人間としてこの映画の中でうつしだされていて、ハルモニがどのような思いで生きてきたのかを感じることができた。亡くなる最期まで闘っていて、正義感や未来世代の思いが強い方だなと思った。</li>
+        <li>素晴らしい映画だった。声を上げて以降の金福童さんのお顔立ちが引き締まった一種独特の美しい相貌へと変わっていく様子や、一被害者、証言者の立場から平和運動家・人権活動家としての意識やナラティブを獲得いていく様に深い感銘を受けた。金さんを支える女性たちや朝鮮学校の少女たちに思いを寄せる金さんのお姿に、世代を超えたシスターフッドを感じたいへん励まされた。</li>
+        <li>金福童さんや彼女をサポートするコミュニティの方々の強い怒りややるせない思いが伝わってきた。金福童さんが放った言葉はどれも印象強く、特に、「口が使えるまで戦う」というセリフは彼女が一生涯賭けて抵抗してきたことの現れであると感じた。</li>
+        <li>ぼやんと認識していた「慰安婦」問題について、韓国目線で（被害者、当事者目線で）学ぶことができた。映画の冒頭で「90歳を過ぎても日本軍慰安婦被害者という過去が付きまとう」という言葉があって、とても印象に残った。</li>
+      </ul>
+    </section>
+
+    <!-- 自主上映勧誘 -->
+    <section id="invite" class="invite">
+      <h2>あなたの街でも自主上映しませんか？</h2>
+      <p>この映画の魅力をもっと多くの人と共有しましょう。自主上映会の開催や企画のご相談も承ります！</p>
+      <p><a href="#contact">お問い合わせはこちら</a></p>
+      <p>
+        <a class="apply-link" href="https://drive.google.com/dummyApplicationForm" target="_blank">
+          上映会開催の申込書はこちら
+        </a>
+      </p>
+    </section>
+  </div>
+</body>
+</html>
