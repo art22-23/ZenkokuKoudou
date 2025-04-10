@@ -172,6 +172,21 @@
     .apply-link:hover {
       background: #555;
     }
+
+    /* エラーメッセージ */
+    .error-message {
+      background-color: #ffdddd;
+      border-left: 6px solid #f44336;
+      margin-bottom: 15px;
+      padding: 10px;
+      color: #333;
+    }
+
+    /* ローディングインジケータ */
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
@@ -188,403 +203,8 @@
   </header>
 
   <div class="container">
-    <!-- 今後の上映情報 -->
-    <section id="upcoming" class="screenings">
-      <h2>今後の上映情報</h2>
-      <table>
-        <tr>
-          <th>日付</th>
-          <th>時間</th>
-          <th>会場</th>
-          <th>主催</th>
-          <th>リンク</th>
-        </tr>
-        <tr>
-          <td>2025/03/19</td>
-          <td>13:30</td>
-          <td>アイーナ・いわて県民情報交流センター</td>
-          <td>-</td>
-          <td>-</td>
-        </tr>
-      </table>
-    </section>
-
-    <section id="past" class="screenings">
-      <h2>過去の上映情報</h2>
-      <details>
-        <summary>過去の上映情報を表示する</summary>
-        
-        <!-- 北海道 -->
-        <h3>北海道</h3>
-        <table>
-          <tr>
-            <th>日付</th>
-            <th>開催地</th>
-            <th>会場</th>
-            <th>主催</th>
-            <th>報告</th>
-          </tr>
-          <tr>
-            <td>2023/5/27</td>
-            <td>札幌</td>
-            <td>北海道高等学校教職員センター4階講堂</td>
-            <td>日本軍「慰安婦」問題の解決をめざす北海道の会</td>
-            <td><a href="https://example.com/report/sapporo" target="_blank">報告を見る</a></td>
-          </tr>
-          <tr>
-            <td>2023/8/10</td>
-            <td>函館</td>
-            <td>函館市地域交流まちづくりセンター</td>
-            <td>金福童上映実行委員会</td>
-            <td><a href="https://example.com/report/hakodate" target="_blank">報告を見る</a></td>
-          </tr>
-        </table>
-        
-        <!-- 東北 -->
-        <h3>東北</h3>
-        <table>
-          <tr>
-            <th>日付</th>
-            <th>開催地</th>
-            <th>会場</th>
-            <th>主催</th>
-            <th>報告</th>
-          </tr>
-          <tr>
-            <td>2025/3/29</td>
-            <td>岩手・盛岡</td>
-            <td>アイーナ・いわて県民情報交流センター</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-        </table>
-        
-        <!-- 関東 -->
-        <h3>関東</h3>
-        <table>
-          <tr>
-            <th>日付</th>
-            <th>開催地</th>
-            <th>会場</th>
-            <th>主催</th>
-            <th>報告</th>
-          </tr>
-          <tr>
-            <td>2023/1/21</td>
-            <td>東京・中野</td>
-            <td>なかのZERO小ホール</td>
-            <td>戦時性暴力問題連絡協議会</td>
-            <td><a href="https://example.com/report/tokyo" target="_blank">報告</a></td>
-          </tr>
-          <tr>
-            <td>2023/3/25</td>
-            <td>川崎</td>
-            <td>川崎市総合自治会館・ホール（武蔵小杉駅前）</td>
-            <td>川崎から日本軍「慰安婦」問題の解決を求める市民の会</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2023/4/22</td>
-            <td>東京・王子</td>
-            <td>北とぴあドームホール</td>
-            <td>在日本朝鮮人人権協会の性差別撤廃部会</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2024/1/20</td>
-            <td>東京・葛飾</td>
-            <td>堀切こうとう教会</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2024/10/19</td>
-            <td>東京・立川</td>
-            <td>立川女性総合センターホール（アイムホール）</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2024/11/4</td>
-            <td>東京・大久保</td>
-            <td>日本キリスト教会柏木教会</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-        </table>
-        
-        <!-- 中部 -->
-        <h3>中部</h3>
-        <table>
-          <tr>
-            <th>日付</th>
-            <th>開催地</th>
-            <th>会場</th>
-            <th>主催</th>
-            <th>報告</th>
-          </tr>
-          <tr>
-            <td>2023/8/26</td>
-            <td>名古屋</td>
-            <td>東別院会館（名古屋市中区橘2-8-45）</td>
-            <td>旧日本軍による性的被害女性を支える会</td>
-            <td>-</td>
-          </tr>
-        </table>
-        
-        <!-- 近畿 -->
-        <h3>近畿</h3>
-        <table>
-          <tr>
-            <th>日付</th>
-            <th>開催地</th>
-            <th>会場</th>
-            <th>主催</th>
-            <th>報告</th>
-          </tr>
-          <tr>
-            <td>2023/1/28</td>
-            <td>神戸</td>
-            <td>神戸まちづくり会館</td>
-            <td>「慰安婦」問題を考える会・神戸</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2023/1/28</td>
-            <td>大阪</td>
-            <td>ドーンセンター　ホール</td>
-            <td>日本軍「慰安婦」問題・関西ネットワーク</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2023/1/29</td>
-            <td>滋賀</td>
-            <td>滋賀県立男女共同参画センター(G-NETしが)1F視聴覚室</td>
-            <td>日本軍「慰安婦」問題を記憶・継承する会・滋賀</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2023/2/25</td>
-            <td>京都</td>
-            <td>アバンティ響都ホール</td>
-            <td>朝鮮学校と民族教育の発展をめざす会・京滋（こっぽんおり）</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2023/3/5</td>
-            <td>大阪</td>
-            <td>シアターセブン</td>
-            <td>日本軍「慰安婦」問題・関西ネットワーク</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2023/6/10</td>
-            <td>京都</td>
-            <td>京都朝鮮初級学校</td>
-            <td>조선학교어머니회교또부련락회</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2023/7/2</td>
-            <td>奈良</td>
-            <td>奈良県女性センター</td>
-            <td>アイ女性会議なら</td>
-            <td><a href="https://example.com/report/nara" target="_blank">報告を見る</a></td>
-          </tr>
-          <tr>
-            <td>2023/8/27</td>
-            <td>大阪・生野</td>
-            <td>Ikuno Park</td>
-            <td>生野上映実行委員会</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2023/9/23</td>
-            <td>宝塚</td>
-            <td>宝塚市立西公民館</td>
-            <td>日本軍「慰安婦」被害女性と共に歩む大阪、神戸、阪神連絡会</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2024/1/11</td>
-            <td>京都</td>
-            <td>京都女子大</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2024/6/6</td>
-            <td>姫路</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2024/9/12</td>
-            <td>大阪・城東</td>
-            <td>城東朝鮮会館</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2024/2/18</td>
-            <td>姫路</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2024/2/25</td>
-            <td>滋賀</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2024/11/30</td>
-            <td>大阪・豊中</td>
-            <td>とよなか男女共同参画推進センターすてっぷ　ホール</td>
-            <td>情報未定</td>
-            <td><a href="https://example.com/report/osakatoshinaka" target="_blank">報告を見る</a></td>
-          </tr>
-        </table>
-        
-        <!-- 中国 -->
-        <h3>中国</h3>
-        <table>
-          <tr>
-            <th>日付</th>
-            <th>開催地</th>
-            <th>会場</th>
-            <th>主催</th>
-            <th>報告</th>
-          </tr>
-          <tr>
-            <td>2023/2/4</td>
-            <td>広島</td>
-            <td>合人社ウエンディひと・まちプラザ（広島市まちづくり市民交流プラザ）</td>
-            <td>日本軍「慰安婦」問題解決ひろしまネットワーク</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2023/8/19</td>
-            <td>岡山</td>
-            <td>岡山県立図書館2階デジタル情報シアター</td>
-            <td>性と生を考える！女たちのおしゃべり会2023 / 慰安婦問題を考える女たちの会・岡山</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2023/8/20</td>
-            <td>福山</td>
-            <td>福山市市民参画センター</td>
-            <td>日本軍「慰安婦」問題を考える会・福山</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2024/10/27</td>
-            <td>広島・廿日</td>
-            <td>日本基督教団廿日市教会</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2024/11/10</td>
-            <td>広島</td>
-            <td>Social Book Cafeハチドリ舎</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-        </table>
-        
-        <!-- 四国 -->
-        <h3>四国</h3>
-        <table>
-          <tr>
-            <th>日付</th>
-            <th>開催地</th>
-            <th>会場</th>
-            <th>主催</th>
-            <th>報告</th>
-          </tr>
-          <tr>
-            <td>2023/8/5</td>
-            <td>高知</td>
-            <td>高知市立自由民権記念館　民権ホール</td>
-            <td>いのちつなぐ</td>
-            <td>-</td>
-          </tr>
-        </table>
-        
-        <!-- 九州 -->
-        <h3>九州</h3>
-        <table>
-          <tr>
-            <th>日付</th>
-            <th>開催地</th>
-            <th>会場</th>
-            <th>主催</th>
-            <th>報告</th>
-          </tr>
-          <tr>
-            <td>2023/7/29</td>
-            <td>北九州</td>
-            <td>北九州市生涯学習総合センター３階ホール</td>
-            <td>련락회</td>
-            <td>-</td>
-          </tr>
-        </table>
-        
-        <!-- 沖縄 -->
-        <h3>沖縄</h3>
-        <table>
-          <tr>
-            <th>日付</th>
-            <th>開催地</th>
-            <th>会場</th>
-            <th>主催</th>
-            <th>報告</th>
-          </tr>
-          <tr>
-            <td>2024/6/1</td>
-            <td>沖縄</td>
-            <td>沖縄キリスト教学院　シャローム会館1－1教室</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2024/7/18～8/17</td>
-            <td>沖縄・シアタードーナツ</td>
-            <td>シアタードーナツ・オキナワ</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2024/7/20</td>
-            <td>沖縄・うるま</td>
-            <td>本と商い　ある日､(書店）</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2024/8/10</td>
-            <td>沖縄・宜野湾</td>
-            <td>沖縄キリスト教センター</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>2024/11/24</td>
-            <td>沖縄・名護</td>
-            <td>名護市立中央図書館AVルーム</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-        </table>
-        
-      </details>
-    </section>
-    
-    
+    <!-- 上映情報はCSVから読み込むReactコンポーネントに置き換え -->
+    <div id="screenings-root"></div>
     
     <!-- 映画の基本情報・紹介 -->
     <section id="info">
@@ -600,11 +220,7 @@
       <p>韓国映画『金福童』は、その闘いの軌跡だ。</p>
       <h2>＜金福童さんについて＞</h2>
       <p>14歳で連行され、中国、シンガポール、インドネシア等の戦場を連れ回された。1992年、周囲の反対を押し切って名乗り出た。2010年より、韓国挺身隊問題対策協議会（挺対協）のシェルター「平和のウリチプ（我が家）」で暮らして以降、その発言と行動力で人権活動家と呼ばれた。2012年3月8日、国際女性デーに吉元玉（キル・ウォノク）ハルモニとともに「ナビ（蝶）基金」を設立。コンゴ、ウガンダ、ナイジェリア、シリアなどの紛争地で性暴力被害に苦しむ女性や、ベトナム戦争の時、韓国軍による性暴力被害に遭った女性たちを支援。2015年の「日韓合意」には、「お金で歴史を売った」と抗議し、政府を提訴するなど先頭で闘う。病に苦しみながらも、朝鮮学校の子どもたちを支援しようと「金福童の希望」基金を設立し、亡くなられる直前まで日本を訪れ子どもたちの羽ばたきを励ました。</p>
-
-
     </section>
-
-    
 
     <!-- 予告編動画 -->
     <section id="trailers" class="trailers">
@@ -645,5 +261,232 @@
       </p>
     </section>
   </div>
-</body>
-</html>
+
+  <!-- React, ReactDOM, Papaparse の読み込み -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/papaparse@5.3.2/papaparse.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+  <!-- Reactコンポーネントをマウント -->
+  <script type="text/babel">
+    // コンポーネントの定義をここに含めるか、別ファイルから読み込む
+    const { useState, useEffect } = React;
+
+    const ScreeningsComponent = () => {
+      const [upcomingScreenings, setUpcomingScreenings] = useState([]);
+      const [pastScreenings, setPastScreenings] = useState([]);
+      const [loading, setLoading] = useState(true);
+      const [error, setError] = useState(null);
+      const [regionMap, setRegionMap] = useState({});
+
+      useEffect(() => {
+        // 日付をYYYY/MM/DDフォーマットに変換する関数
+        const formatDate = (dateStr) => {
+          const date = new Date(dateStr);
+          const year = date.getFullYear();
+          const month = String(date.getMonth() + 1).padStart(2, '0');
+          const day = String(date.getDate()).padStart(2, '0');
+          return `${year}/${month}/${day}`;
+        };
+
+      if (loading) {
+        return <div>データを読み込み中...</div>;
+      }
+
+      if (error) {
+        return <div className="error-message">{error}</div>;
+      }
+
+      return (
+        <div>
+          {/* 今後の上映情報 */}
+          <section id="upcoming" className="screenings">
+            <h2>今後の上映情報</h2>
+            {upcomingScreenings.length === 0 ? (
+              <p>現在予定されている上映情報はありません。</p>
+            ) : (
+              <table>
+                <thead>
+                  <tr>
+                    <th>日付</th>
+                    <th>時間</th>
+                    <th>会場</th>
+                    <th>主催</th>
+                    <th>リンク</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {upcomingScreenings.map((screening, index) => (
+                    <tr key={index}>
+                      <td>{screening.date}</td>
+                      <td>{screening.time || '-'}</td>
+                      <td>{screening.venue || '-'}</td>
+                      <td>{screening.organizer || '-'}</td>
+                      <td>
+                        {screening.link ? (
+                          <a href={screening.link} target="_blank" rel="noopener noreferrer">詳細</a>
+                        ) : (
+                          '-'
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
+          </section>
+
+          {/* 過去の上映情報 */}
+          <section id="past" className="screenings">
+            <h2>過去の上映情報</h2>
+            <details>
+              <summary>過去の上映情報を表示する</summary>
+              
+              {groupByRegion(pastScreenings).map(({ region, screenings }) => (
+                <div key={region}>
+                  <h3>{region}</h3>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>日付</th>
+                        <th>開催地</th>
+                        <th>会場</th>
+                        <th>主催</th>
+                        <th>報告</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {screenings.map((screening, index) => (
+                        <tr key={index}>
+                          <td>{screening.date}</td>
+                          <td>{screening.city || '-'}</td>
+                          <td>{screening.venue || '-'}</td>
+                          <td>{screening.organizer || '-'}</td>
+                          <td>
+                            {screening.report_link ? (
+                              <a href={screening.report_link} target="_blank" rel="noopener noreferrer">報告を見る</a>
+                            ) : (
+                              '-'
+                            )}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ))}
+            </details>
+          </section>
+        </div>
+      );
+    };
+
+    // Reactコンポーネントをレンダリング
+    const root = ReactDOM.createRoot(document.getElementById('screenings-root'));
+    root.render(<ScreeningsComponent />);
+
+        // CSVデータを読み込む
+        const fetchData = async () => {
+          try {
+            // 上映情報CSVを読み込む
+            const screeningsResponse = await window.fs.readFile('screenings.csv', { encoding: 'utf8' });
+            
+            // 地域マッピングCSVを読み込む
+            const regionsResponse = await window.fs.readFile('regions.csv', { encoding: 'utf8' });
+            
+            // 地域マッピングを解析
+            const regionData = Papa.parse(regionsResponse, {
+              header: true,
+              skipEmptyLines: true
+            });
+            
+            // 地域マッピングを構築
+            const regionMapping = {};
+            regionData.data.forEach(row => {
+              if (row.city && row.region) {
+                regionMapping[row.city] = row.region;
+              }
+            });
+            setRegionMap(regionMapping);
+
+            // 上映情報を解析
+            const result = Papa.parse(screeningsResponse, {
+              header: true,
+              skipEmptyLines: true,
+              dynamicTyping: true,
+              transformHeader: header => header.trim(),
+              transform: (value, field) => {
+                if (field === 'date' && value) {
+                  return formatDate(value);
+                }
+                return value;
+              }
+            });
+
+            if (result.errors.length > 0) {
+              console.error('CSVの解析中にエラーが発生しました:', result.errors);
+              setError('データの読み込み中にエラーが発生しました。');
+            } else {
+              const now = new Date();
+              
+              // 日付でソート
+              const sortedData = result.data.sort((a, b) => {
+                const dateA = new Date(a.date.split('/').join('-'));
+                const dateB = new Date(b.date.split('/').join('-'));
+                return dateA - dateB;
+              });
+              
+              // 今後と過去の上映情報に分離
+              const upcoming = [];
+              const past = [];
+              
+              sortedData.forEach(screening => {
+                const screeningDate = new Date(screening.date.split('/').join('-'));
+                if (screeningDate >= now) {
+                  upcoming.push(screening);
+                } else {
+                  past.push(screening);
+                }
+              });
+              
+              setUpcomingScreenings(upcoming);
+              setPastScreenings(past);
+            }
+          } catch (err) {
+            console.error('データの読み込み中にエラーが発生しました:', err);
+            setError('データの読み込み中にエラーが発生しました。');
+          } finally {
+            setLoading(false);
+          }
+        };
+
+        fetchData();
+      }, []);
+
+      // 地域別に上映情報をグループ化
+      const groupByRegion = (screenings) => {
+        const grouped = {};
+        
+        screenings.forEach(screening => {
+          const city = screening.city || '';
+          const region = regionMap[city] || '未分類';
+          
+          if (!grouped[region]) {
+            grouped[region] = [];
+          }
+          
+          grouped[region].push(screening);
+        });
+        
+        // 地域の順序を指定
+        const regionOrder = ['北海道', '東北', '関東', '中部', '近畿', '中国', '四国', '九州', '沖縄', '未分類'];
+        
+        // 順序付けされた地域ごとの上映情報を返す
+        return regionOrder
+          .filter(region => grouped[region] && grouped[region].length > 0)
+          .map(region => ({
+            region,
+            screenings: grouped[region]
+          }));
+      };
