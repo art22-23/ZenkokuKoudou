@@ -203,8 +203,20 @@
   </header>
 
   <div class="container">
-    <!-- 上映情報はCSVから読み込むReactコンポーネントに置き換え -->
-    <div id="screenings-root"></div>
+    <!-- 上映情報はCSVから読み込む -->
+    <section id="upcoming" class="screenings">
+      <h2>今後の上映情報</h2>
+      <div id="upcoming-screenings">
+        <div style="text-align: center; padding: 20px;">データを読み込み中...</div>
+      </div>
+    </section>
+
+    <section id="past" class="screenings">
+      <h2>過去の上映情報</h2>
+      <div id="past-screenings">
+        <div style="text-align: center; padding: 20px;">データを読み込み中...</div>
+      </div>
+    </section>
     
     <!-- 映画の基本情報・紹介 -->
     <section id="info">
@@ -262,11 +274,7 @@
     </section>
   </div>
 
-  <!-- React, ReactDOM, Papaparse の読み込み -->
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/papaparse@5.3.2/papaparse.min.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- 外部ライブラリは使わないようにした -->
   
   <!-- Reactコンポーネントをマウント -->
   <script type="text/babel">
