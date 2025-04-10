@@ -178,7 +178,7 @@
 </head>
 <body>
   <header>
-    <h1>ドキュメンタリー映画「金福童」特設サイトtest4</h1>
+    <h1>ドキュメンタリー映画「金福童」特設サイト</h1>
     <nav>
       <a href="#upcoming">今後の上映情報</a>
       <a href="#past">過去の上映情報</a>
@@ -190,27 +190,71 @@
   </header>
 
   <div class="container">
-    <!-- React による上映情報の表示 -->
+    <!-- React による上映情報の表示（CSVから動的に読み込み） -->
     <div id="screenings-root"></div>
 
-    <!-- その他の静的コンテンツ -->
+    <!-- 映画の基本情報・紹介 -->
     <section id="info">
       <h2>映画について</h2>
       <p>本作は、日本軍「慰安婦」被害者である金福童さんの人生を描いた作品です。</p>
       <p>日本軍の性奴隷とされた金福童さんが1992年の名乗り出以降、問題の解決を訴えながら出会いを重ね、社会の不条理に苦しむ人々を励まし、手を取ってともに歩む姿が描かれています。2019年1月、金福童さんが亡くなられ、その生を多くの人に知ってもらおうとドキュメンタリー映画「金福童」が製作されました。私たちはこの映画をぜひ多くの日本の皆さんにも見てほしいと考え、全国各地での上映を進めています。金福童さんの生き方に共感し、感動した、勇気と希望をもらったという多くの声が届いています。</p>
-      <p>監督：宋元根 （ソン・ウォングン）| 制作年：2019年 |制作会社：ニュースタパ |上映時間：101分  </p>
-      <!-- 以下、続く紹介文など -->
+      <p>監督：宋元根 （ソン・ウォングン）| 制作年：2019年 |制作会社：ニュースタパ |上映時間：101分</p>
+      <h2>壮絶な生があり、希望に満ちた死があった。</h2>
+      <p>その死を悼んで「女性人権運動家・金福童市民葬」には6千人が集まった。</p>
+      <p>人々はなぜそれほどまでに彼女を慕い、敬い、その死を惜しんだのか。</p>
+      <p>その理由が今、明かされる。</p>
+      <p>日本軍性奴隷の被害を乗り越えて、人々に平和と希望の尊さを訴え続けた金福童。</p>
+      <p>韓国映画『金福童』は、その闘いの軌跡だ。</p>
+      <h2>＜金福童さんについて＞</h2>
+      <p>14歳で連行され、中国、シンガポール、インドネシア等の戦場を連れ回された。1992年、周囲の反対を押し切って名乗り出た。2010年より、韓国挺身隊問題対策協議会（挺対協）のシェルター「平和のウリチプ（我が家）」で暮らして以降、その発言と行動力で人権活動家と呼ばれた。2012年3月8日、国際女性デーに吉元玉（キル・ウォノク）ハルモニとともに「ナビ（蝶）基金」を設立。コンゴ、ウガンダ、ナイジェリア、シリアなどの紛争地で性暴力被害に苦しむ女性や、ベトナム戦争の時、韓国軍による性暴力被害に遭った女性たちを支援。2015年の「日韓合意」には、「お金で歴史を売った」と抗議し、政府を提訴するなど先頭で闘う。病に苦しみながらも、朝鮮学校の子どもたちを支援しようと「金福童の希望」基金を設立し、亡くなられる直前まで日本を訪れ子どもたちの羽ばたきを励ました。</p>
     </section>
-    <!-- 予告編、視聴者の感想、自主上映勧誘等の静的セクションをここに配置 -->
+
+    <!-- 予告編動画 -->
+    <section id="trailers" class="trailers">
+      <h2>予告編動画</h2>
+      <iframe src="https://www.youtube.com/embed/h_GMQhBKHKg?si=q99kQlwt_xzxKwbu" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/TyMO_5L97kg?si=3-tjcbnmSrt4LuCz" allowfullscreen></iframe>
+    </section>
+
+    <!-- 視聴者の感想 -->
+    <section id="feedback" class="feedback">
+      <h2>視聴者の感想</h2>
+      <ul>
+        <li>始まって10分くらいから終わりまで涙が止まらなかった。ハルモニのお人柄や言葉に感動。忘れずに、しっかりと周りに伝えていくのが自分の使命だと思った。</li>
+        <li>過剰にエモーショナルではなく、また金さんを神格化するでもなく、淡々としているのに、彼女自身の内側からみなぎる存在感に圧倒された。そしてガン闘病中のスピーチ、背筋が伸びて表情がとてもとても美しかった。</li>
+        <li>「何度も見たくなる、感動作です。」</li>
+        <li>1人のハルモニを追ったドキュメンタリーは見たことがなかったので、金福童ハルモニの言葉1つ1つが直接語りかけてくれているように思った。ハルモニの貴重な声を残してくださったことにありがとうと言いたい。</li>
+        <li>「希望」は勝ち取るもの……。本当にそうだと思った。ハルモニが職員の方に「○○」と毎日声をかける姿は、孤立無援で1人かたくなに闘っているのではなく、手に手を取って心つなぎ歴史の中に生きる1人の人間なのだと、伝わってきた。</li>
+        <li>金福童ハルモニの人生が、人権活動家、被害者としてだけでなく人間としてこの映画の中でうつしだされていて、ハルモニがどのような思いで生きてきたのかを感じることができた。亡くなる最期まで闘っていて、正義感や未来世代の思いが強い方だなと思った。</li>
+        <li>素晴らしい映画だった。声を上げて以降の金福童さんのお顔立ちが引き締まった一種独特の美しい相貌へと変わっていく様子や、一被害者、証言者の立場から平和運動家・人権活動家としての意識やナラティブを獲得いていく様に深い感銘を受けた。金さんを支える女性たちや朝鮮学校の少女たちに思いを寄せる金さんのお姿に、世代を超えたシスターフッドを感じたいへん励まされた。</li>
+        <li>金福童さんや彼女をサポートするコミュニティの方々の強い怒りややるせない思いが伝わってきた。金福童さんが放った言葉はどれも印象強く、特に、「口が使えるまで戦う」というセリフは彼女が一生涯賭けて抵抗してきたことの現れであると感じた。</li>
+        <li>ぼやんと認識していた「慰安婦」問題について、韓国目線で（被害者、当事者目線で）学ぶことができた。映画の冒頭で「90歳を過ぎても日本軍慰安婦被害者という過去が付きまとう」という言葉があって、とても印象に残った。</li>
+      </ul>
+    </section>
+
+    <!-- 自主上映勧誘 -->
+    <section id="invite" class="invite">
+      <h2>あなたの街でも自主上映しませんか？</h2>
+      <p>全国行動は、映画「金福童」の自主上映を広げるため、韓国の配給会社(株)イェンナフィルムへの取り次ぎや広報のお手伝いをさせていただきます。みなさまの地域やグループ等で上映会を希望される場合は以下にご連絡、ご相談ください。</p>
+      <p>お問い合わせはこちらまで：i_zenkokukoudou@yahoo.co.jp</p>
+      <p>
+        <a class="apply-link" href="https://drive.google.com/file/d/1Y-OvZ_sh8AXq1v6yctd0OkG73aODAxGJ/view?usp=sharing" target="_blank">
+          上映会開催について
+        </a>
+        <a class="apply-link" href="https://docs.google.com/document/d/1oLQeWWynLZ4nLoCn7yRmYEURkSIDMLwH/edit?usp=sharing&amp;ouid=111190553002830574240&amp;rtpof=true&amp;sd=true" target="_blank">
+          上映会開催の申込書
+        </a>
+      </p>
+    </section>
   </div>
 
-  <!-- 必要な外部ライブラリの読み込み -->
+  <!-- 外部ライブラリの読み込み -->
   <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
 
-  <!-- CSVデータの読み込みとReactレンダリング用スクリプト -->
+  <!-- CSV読み込みとReactコンポーネント -->
   <script type="text/babel">
     const { useState, useEffect } = React;
 
@@ -221,7 +265,7 @@
       const [error, setError] = useState(null);
       const [regionMap, setRegionMap] = useState({});
 
-      // 日付をYYYY/MM/DD形式に変換するヘルパー関数
+      // 日付をYYYY/MM/DD形式に変換する関数
       const formatDate = (dateStr) => {
         const date = new Date(dateStr);
         const year = date.getFullYear();
@@ -241,7 +285,7 @@
           }
           grouped[region].push(screening);
         });
-        // 地域の順序を指定
+        // 地域の順序
         const regionOrder = ['北海道', '東北', '関東', '中部', '近畿', '中国', '四国', '九州', '沖縄', '未分類'];
         return regionOrder
           .filter(region => grouped[region] && grouped[region].length > 0)
@@ -251,16 +295,15 @@
           }));
       };
 
-      // CSVデータを読み込む副作用処理
       useEffect(() => {
         const fetchData = async () => {
           try {
-            // fetch()でCSVファイルを取得
-            const screeningsResponse = await fetch('screenings.csv').then(res => res.text());
-            const regionsResponse = await fetch('regions.csv').then(res => res.text());
+            // fetch() を用いて CSV ファイルを取得
+            const screeningsText = await fetch('screenings.csv').then(res => res.text());
+            const regionsText = await fetch('regions.csv').then(res => res.text());
 
             // 地域マッピングCSVの解析
-            const regionData = Papa.parse(regionsResponse, {
+            const regionData = Papa.parse(regionsText, {
               header: true,
               skipEmptyLines: true
             });
@@ -273,7 +316,7 @@
             setRegionMap(regionMapping);
 
             // 上映情報CSVの解析
-            const result = Papa.parse(screeningsResponse, {
+            const result = Papa.parse(screeningsText, {
               header: true,
               skipEmptyLines: true,
               dynamicTyping: true,
@@ -290,14 +333,12 @@
               console.error('CSV解析エラー:', result.errors);
               setError('データの読み込み中にエラーが発生しました。');
             } else {
-              // 日付順にソート
               const now = new Date();
               const sortedData = result.data.sort((a, b) => {
                 const dateA = new Date(a.date.split('/').join('-'));
                 const dateB = new Date(b.date.split('/').join('-'));
                 return dateA - dateB;
               });
-              // 今後と過去の上映情報に振り分け
               const upcoming = [];
               const past = [];
               sortedData.forEach(screening => {
@@ -413,12 +454,10 @@
       );
     };
 
-    // React 18の場合
     if (ReactDOM.createRoot) {
       const root = ReactDOM.createRoot(document.getElementById('screenings-root'));
       root.render(<ScreeningsComponent />);
     } else {
-      // React 17以前
       ReactDOM.render(<ScreeningsComponent />, document.getElementById('screenings-root'));
     }
   </script>
