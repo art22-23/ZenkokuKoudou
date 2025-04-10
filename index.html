@@ -270,7 +270,7 @@
   
   <!-- Reactコンポーネントをマウント -->
   <script type="text/babel">
-    // コンポーネントの定義をここに含めるか、別ファイルから読み込む
+    // コンポーネントの定義（Babelがトランスパイルするため、古いブラウザでも動作します）
     const { useState, useEffect } = React;
 
     const ScreeningsComponent = () => {
@@ -380,11 +380,17 @@
           </section>
         </div>
       );
-    };
+    }
 
-    // Reactコンポーネントをレンダリング
-    const root = ReactDOM.createRoot(document.getElementById('screenings-root'));
-    root.render(<ScreeningsComponent />);
+    // Reactコンポーネントをレンダリング（React 18と17以前の両方で動作するようにする）
+    if (ReactDOM.createRoot) {
+      // React 18
+      const root = ReactDOM.createRoot(document.getElementById('screenings-root'));
+      root.render(<ScreeningsComponent />);
+    } else {
+      // React 17以前
+      ReactDOM.render(<ScreeningsComponent />, document.getElementById('screenings-root'));
+    }
 
         // CSVデータを読み込む
         const fetchData = async () => {
