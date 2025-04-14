@@ -436,10 +436,10 @@
                           <td>{screening.venue || '-'}</td>
                           <td>{screening.organizer || '-'}</td>
                           <td>
-                            {screening.report_link ? (
+                            { screening.report_link && screening.report_link !== '-' ? (
                               <a href={screening.report_link} target="_blank" rel="noopener noreferrer">報告を見る</a>
                             ) : (
-                              '-'
+                              ''
                             )}
                           </td>
                         </tr>
