@@ -386,7 +386,7 @@
                     <th>時間</th>
                     <th>会場</th>
                     <th>主催</th>
-                    <th>リンク</th>
+                    <th>公式HP</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -398,7 +398,7 @@
                       <td>{screening.organizer || '-'}</td>
                       <td>
                         {screening.link ? (
-                          <a href={screening.link} target="_blank" rel="noopener noreferrer">詳細</a>
+                          <a href={screening.link} target="_blank" rel="noopener noreferrer">アクセス</a>
                         ) : (
                           '-'
                         )}
@@ -463,3 +463,4 @@
   </script>
 </body>
 </html>
+
