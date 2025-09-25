@@ -95,6 +95,7 @@
       padding: 10px;
       border-bottom: 1px solid #ddd;
       text-align: left;
+      vertical-align: top;
     }
 
     /* detailsスタイル */
@@ -163,7 +164,7 @@
       transition: background 0.3s;
     }
     .apply-link:hover {
-      background: #555;
+      background: #333;
     }
 
     /* エラーメッセージ */
@@ -238,10 +239,10 @@
       <p>全国行動は、映画「金福童」の自主上映を広げるため、韓国の配給会社(株)イェンナフィルムへの取り次ぎや広報のお手伝いをさせていただきます。みなさまの地域やグループ等で上映会を希望される場合は以下にご連絡、ご相談ください。</p>
       <p>お問い合わせはこちらまで：i_zenkokukoudou@yahoo.co.jp</p>
       <p>
-        <a class="apply-link" href="https://drive.google.com/file/d/1Y-OvZ_sh8AXq1v6yctd0OkG73aODAxGJ/view?usp=sharing" target="_blank">
+        <a class="apply-link" href="https://drive.google.com/file/d/1Y-OvZ_sh8AXq1v6yctd0OkG73aODAxGJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">
           上映会開催について
         </a>
-        <a class="apply-link" href="https://docs.google.com/document/d/1oLQeWWynLZ4nLoCn7yRmYEURkSIDMLwH/edit?usp=sharing&amp;ouid=111190553002830574240&amp;rtpof=true&amp;sd=true" target="_blank">
+        <a class="apply-link" href="https://docs.google.com/document/d/1oLQeWWynLZ4nLoCn7yRmYEURkSIDMLwH/edit?usp=sharing&amp;ouid=111190553002830574240&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer">
           上映会開催の申込書
         </a>
       </p>
@@ -272,6 +273,30 @@
         const month = String(date.getMonth() + 1).padStart(2, '0');
         const day = String(date.getDate()).padStart(2, '0');
         return `${year}/${month}/${day}`;
+      };
+
+      // 連絡先の整形・リンク化
+      const renderContact = (value) => {
+        if (!value) return '-';
+        const parts = String(value).split(/[,;]\s*/).filter(Boolean);
+        const joined = parts.map((p, i) => {
+          const s = p.trim();
+          if (/^https?:\/\//i.test(s)) {
+            return <a key={`u${i}`} href={s} target="_blank" rel="noopener noreferrer">公式サイト</a>;
+          }
+          if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s)) {
+            return <a key={`m${i}`} href={`mailto:${s}`}>{s}</a>;
+          }
+          if (/^\+?\d[\d\-()\s]{6,}$/.test(s)) {
+            const tel = s.replace(/[^\d+]/g,'');
+            return <a key={`t${i}`} href={`tel:${tel}`}>{s}</a>;
+          }
+          return <span key={`s${i}`}>{s}</span>;
+        });
+        // 区切り表示（ / ）
+        return joined.reduce((acc, el, idx) => (
+          idx ? acc.concat([<span key={`sep-${idx}`}> / </span>, el]) : [el]
+        ), []);
       };
 
       // 地域別に上映情報をグループ化する関数
@@ -386,6 +411,7 @@
                     <th>時間</th>
                     <th>会場</th>
                     <th>主催</th>
+                    <th>連絡先</th> {/* 追加列 */}
                     <th>公式HP</th>
                   </tr>
                 </thead>
@@ -396,6 +422,7 @@
                       <td>{screening.time || '-'}</td>
                       <td>{screening.venue || '-'}</td>
                       <td>{screening.organizer || '-'}</td>
+                      <td>{renderContact(screening.contact)}</td>
                       <td>
                         {screening.link ? (
                           <a href={screening.link} target="_blank" rel="noopener noreferrer">HP</a>
@@ -410,7 +437,7 @@
             )}
           </section>
 
-          {/* 過去の上映情報 */}
+          {/* 過去の上映情報（※今回は連絡先列は未追加のまま） */}
           <section id="past" className="screenings">
             <h2>過去の上映情報</h2>
             <details>
@@ -463,5 +490,3 @@
   </script>
 </body>
 </html>
-
-
